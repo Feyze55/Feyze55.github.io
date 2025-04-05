@@ -1,22 +1,23 @@
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  background-color: #ece2d0;
+  color: #2e294e;
   margin: 0;
   padding: 0;
 }
 
 .container {
   width: 90%;
-  max-width: 800px;
-  margin: auto;
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
   background: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  margin-top: 40px;
+  border-radius: 20px;
 }
 
+/* Header */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -25,26 +26,30 @@ header {
 h1 {
   margin-bottom: 5px;
   font-size: 2.5em;
+  color: #2e294e;
 }
 
 h2 {
-  color: #444;
+  color: #a2708a;
   margin-top: 30px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #ccc;
   padding-bottom: 5px;
 }
 
+/* Lists */
 ul {
   list-style: none;
   padding-left: 0;
 }
 
 ul li {
-  padding: 5px 0;
+  padding: 8px 0;
+  line-height: 1.5;
 }
 
+/* Links */
 a {
-  color: #0077cc;
+  color: #077187;
   text-decoration: none;
 }
 
@@ -52,12 +57,15 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
   text-align: center;
   margin-top: 40px;
   color: #888;
   font-size: 0.9em;
 }
+
+/* Responsive */
 @media screen and (max-width: 600px) {
   body {
     font-size: 16px;
@@ -80,6 +88,8 @@ footer {
     font-size: 1em;
   }
 }
+
+/* Profile Image */
 .profile-pic {
   width: 150px;
   height: 150px;
@@ -89,18 +99,69 @@ footer {
   margin: 0 auto 15px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Download Button */
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0077cc;
+  background-color: #077187;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-top: 10px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #005fa3;
+  background-color: #055a66;
+}
+
+/* Timeline */
+.timeline ul {
+  padding-left: 20px;
+  border-left: 4px solid #4a7b9d;
+  margin-top: 20px;
+}
+
+.timeline li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-color: #a2708a;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #4a7b9d;
+}
+
+/* Tech Stack */
+.tech-stack .stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.tech-stack .stack-list li {
+  background-color: #4a7b9d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 40px;
 }
