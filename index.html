@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Feyze Malik | Mechatronic Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="me.jpg" alt="Profile picture of Feyze" class="profile-pic">
-      <h1>Feyze Malik</h1>
-      <p>Ambitious future Engineer & Programmer</p>
-    </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#tech">Tech Stack</a></li>
+      <li><a href="#contact">Contact Info</a></li>
+    </ul>
+  </nav>
 
-    <section class="about">
+  <div class="container">
+
+    <!-- Homepage Section -->
+    <section id="home" class="hero">
+      <img src="me.jpg" alt="Avatar of Feyze" class="avatar">
+      <div class="intro-text">
+        <h1>Feyze Malik</h1>
+        <p>Mechatronic Engineering student & Aspiring Programmer</p>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
       <h2>About Me</h2>
+      <button id="show-image-btn">Click to see a photo from my journey</button>
+      <img src="me.jpg" alt="Feyze as a child tinkering" class="about-photo" id="about-photo" style="display: none; width: 250px; margin-top: 1em;"/>
+
       <p>
-        My journey started as a kid who always broke his remote control cars, using the motor to make fans and the LEDs to build small torches — just trying to understand each individual element that made up this product. Back then it felt like something I would never come to understand, but that curiosity never died out.
+        My journey started as a kid who always broke his remote control cars, using the motor to make fans and the LEDs to build small torches — just trying to understand each individual element that made up this product.
         <br><br>
-        By the time I reached high school, I learned about the two aspects of technology: the hardware and the software. Since then, I’ve been passionate about understanding how they work together to build complex machines. I chose IT as a subject in Grade 10 even though I didn’t have a laptop — a requirement for the course. I struggled at first, but once I got my own laptop, I finally had the time to sit down and dive deep into coding. From that point on, I fell in love.
+        By the time I reached high school, I learned about the two aspects of technology: the hardware and the software. I chose IT in Grade 10 even without a laptop. Once I got one, I dove deep into coding — and fell in love.
         <br><br>
-        Now, as a Mechatronic Engineering student at NWU, I’m eager to explore how microcontrollers, circuits, and code can work in harmony. Whether it’s building, designing, or inventing, I’m driven to understand and create wherever I am.
+        Now, as a Mechatronic Engineering student at NWU, I’m eager to explore how microcontrollers, circuits, and code can work in harmony.
       </p>
     </section>
 
-    <section class="projects">
+    <!-- Projects -->
+    <section id="projects" class="projects">
       <h2>Projects</h2>
       <ul>
         <li>
           <strong>Labyrinth of the Mathematician (2022)</strong>  
           <p>An educational math game created in Grade 10 to help students engage with mathematical concepts through gameplay logic and interactive problem-solving.  
-          <br><em>🛠️ Web version in development.</em></p>
+          <br><em>🛠️ Web version coming soon...</em></p>
         </li>
         <li>
           <strong>Cloud9 Superstores (2023)</strong>  
           <p>A retail management simulation project from Grade 11. Created using Delphi and SQL, it allowed users to manage inventory and process sales.  
-          <br><em>🛠️ Web version coming soon.</em></p>
+          <br><em>🛠️ Web version coming soon...</em></p>
         </li>
         <li>
           <strong>SwiftFund Property (2024)</strong>  
           <p>A loan management system and my Grade 12 final project. Built with OOP and SQL integration to assist users in calculating and managing home loan applications.  
-          <br><em>🛠️ Web version in progress.</em></p>
+          <br><em>🛠️ Web version coming soon...</em></p>
         </li>
       </ul>
     </section>
 
+    <!-- Timeline -->
     <section class="timeline">
       <h2>Timeline</h2>
       <ul>
@@ -60,7 +80,8 @@
       </ul>
     </section>
 
-    <section class="tech-stack">
+    <!-- Tech Stack -->
+    <section id="tech" class="tech-stack">
       <h2>Tech Stack</h2>
       <ul class="stack-list">
         <li>Delphi</li>
@@ -68,24 +89,36 @@
         <li>C</li>
         <li>JavaScript</li>
         <li>C#</li>
+        <li>HTML/CSS</li>
       </ul>
     </section>
 
-    <section class="contact">
+    <!-- Contact -->
+    <section id="contact" class="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:malikfeyze@gmail.com">malikfeyze@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/Feyze55" target="_blank">Feyze55</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/feyze55" target="_blank">View Profile</a></p>
     </section>
 
+    <!-- CV Download -->
     <section class="cv-download">
       <h2>Download My CV</h2>
       <a href="Feyze_CV.pdf" download class="btn">Download CV (PDF)</a>
     </section>
-    
+
+    <!-- Footer -->
     <footer>
       <p>© 2025 Feyze. Built with 💻 + ☕</p>
     </footer>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('show-image-btn').addEventListener('click', function () {
+      const img = document.getElementById('about-photo');
+      img.style.display = img.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>
