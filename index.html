@@ -132,22 +132,32 @@
 </head>
   
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About Me</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#timeline" class="nav-link">Timeline</a></li>
-      <li><a href="#tech" class="nav-link">Tech Stack</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="navbar">
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#tech">Tech Stack</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+     </div>
+  </div>
 
   <div class="container">
     <!-- Homepage Section -->
     <section id="home" class="home">
       <div class="intro-container">
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_Feyze55.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        <lottie-player
+          src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/Waving.json"
+          background="transparent"
+          speed="1"
+          style="width: 200px; height: 200px;"
+          loop
+          autoplay
+        ></lottie-player>
         <div class="intro-text">
           <h2>Hi there!👨‍💻</h2>
           <p>I'm Feyze Malik, a Mechatronic Engineering student who loves building things — from circuits to code. Welcome to my portfolio!</p>
@@ -268,6 +278,15 @@
         }
       });
     });
+  </script>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
   </script>
 
 </body>
