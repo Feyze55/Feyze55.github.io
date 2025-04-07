@@ -32,6 +32,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: relative;
 }
 
 .navbar .logo {
@@ -47,6 +48,9 @@ body {
   border: none;
   display: none;
   cursor: pointer;
+  position: relative;
+  z-index: 1001;
+  margin-left: auto;
 }
 
 /* Sidebar Styles */
@@ -349,6 +353,42 @@ footer {
 .stack-list li:hover {
   transform: translateY(-4px);
   background-color: #4a7b9d;
+}
+
+.stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.stack-icons li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stack-icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.stack-icons span {
+  font-weight: bold;
+  color: #2e294e;
+  font-size: 0.95em;
+}
+
+.stack-icons li:hover {
+  transform: translateY(-6px);
 }
 
 /* Section spacing */
