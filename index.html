@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Feyze Malik | Mechatronic Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -20,11 +21,19 @@
   <div class="container">
 
     <!-- Homepage Section -->
-    <section id="home" class="hero">
-      <img src="me.jpg" alt="Avatar of Feyze" class="avatar">
-      <div class="intro-text">
-        <h1>Feyze Malik</h1>
-        <p>Mechatronic Engineering student & Aspiring Programmer</p>
+    <section class="home">
+      <div class="intro-container">
+        <lottie-player 
+          src="https://assets3.lottiefiles.com/packages/lf20_nZttvE.json" 
+          background="transparent"  
+          speed="1"  
+          style="width: 180px; height: 180px;"  
+          loop autoplay>
+        </lottie-player>
+        <div class="intro-text">
+          <h2>Hi there!👨‍💻</h2>
+          <p>I'm Feyze Malik, a Mechatronic Engineering student who loves building things — from circuits to code. Welcome to my portfolio!</p>
+        </div>
       </div>
     </section>
 
@@ -32,7 +41,7 @@
     <section id="about" class="about">
       <h2>About Me</h2>
       <button id="show-image-btn">Click to see a photo from my journey</button>
-      <img src="me.jpg" alt="Feyze as a child tinkering" class="about-photo" id="about-photo" style="display: none; width: 250px; margin-top: 1em;"/>
+      <img src="me.jpg" alt="Feyze Malik" class="about-photo" id="about-photo" style="display: none; width: 250px; margin-top: 1em;"/>
 
       <p>
         My journey started as a kid who always broke his remote control cars, using the motor to make fans and the LEDs to build small torches — just trying to understand each individual element that made up this product.
