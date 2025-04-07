@@ -18,6 +18,34 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Home Section */
+.home {
+  margin-top: 40px;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ece2d0;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.intro-text h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #2e294e;
+}
+
+.intro-text p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #4a7b9d;
+  max-width: 400px;
+}
+
 /* Navigation */
 nav {
   background-color: #4a7b9d;
