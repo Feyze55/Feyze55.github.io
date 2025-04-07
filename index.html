@@ -11,6 +11,7 @@
     html {
       scroll-behavior: smooth;
     }
+
     /* Navigation Bar */
     .navbar {
       position: fixed;
@@ -82,9 +83,24 @@
       height: 180px;
     }
 
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+      }
+
+      .navbar ul li {
+        margin: 10px 0;
+      }
+
+      .intro-container {
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
-  
+
 <body>
   <nav class="navbar">
     <ul>
@@ -101,28 +117,28 @@
     <!-- Homepage Section -->
     <section id="home" class="home">
       <div class="intro-container">
-        <img 
-          src="https://github.com/Feyze55/Feyze55.github.io/raw/main/Waving.gif" 
-          alt="Waving Avatar" 
-          class="avatar" 
-          width="180" 
-          height="180"
-        />
+        <lottie-player 
+          src="https://assets8.lottiefiles.com/packages/lf20_vl5zc9.json"  
+          background="transparent"  
+          speed="1"  
+          loop  
+          autoplay 
+        ></lottie-player>
         <div class="intro-text">
           <h2>Hi there!👨‍💻</h2>
           <p>I'm Feyze Malik, a Mechatronic Engineering student who loves building things — from circuits to code. Welcome to my portfolio!</p>
         </div>
       </div>
-    </section>>
+    </section>
 
     <!-- About Me Section -->
     <section id="about" class="about">
       <h2>About Me</h2>
-      <button id="show-image-btn">Click to see a photo from my journey</button>
-      <img src="me.jpg" alt="Feyze Malik" class="about-photo" id="about-photo" style="display: none; width: 250px; margin-top: 1em;"/>
+      <button id="show-image-btn">Click to see a photo of me</button>
+      <img src="me.jpg" alt="Feyze Malik" class="about-photo" id="about-photo" style="display: none; width: 250px; margin-top: 1em;" />
 
       <p>
-        My journey started as a kid who always broke his remote control cars, using the motor to make fans and the LEDs to build small torches — just trying to understand each individual element that made up this product.
+        My story starts as a kid who always broke his remote control cars, using the motor to make fans and the LEDs to build small torches — just trying to understand each individual element that made up this product.
         <br><br>
         By the time I reached high school, I learned about the two aspects of technology: the hardware and the software. I chose IT in Grade 10 even without a laptop. Once I got one, I dove deep into coding — and fell in love.
         <br><br>
@@ -149,21 +165,6 @@
           <p>A loan management system and my Grade 12 final project. Built with OOP and SQL integration to assist users in calculating and managing home loan applications.  
           <br><em>🛠️ Web version coming soon...</em></p>
         </li>
-      </ul>
-    </section>
-
-    <!-- Timeline -->
-    <section id="timeline" class="timeline">
-      <h2>Timeline</h2>
-      <ul>
-        <li><strong>2022</strong> – Wrote my first lines of code in Delphi and built my first program.</li>
-        <li><strong>2023</strong> – Started using SQL and created database-connected programs in Delphi.</li>
-        <li><strong>2024</strong> – Built my final high school project using OOP, SQL, and multiple programming concepts.  
-          <br>🎓 Matriculated with 89% for IT.
-        </li>
-        <li><strong>2025</strong> – Began BEng in Mechatronic Engineering at NWU.</li>
-        <li><strong>2025</strong> – Built my first 555 timer circuit on a breadboard.</li>
-        <li><strong>2025</strong> – Launched this portfolio site! 🚀</li>
       </ul>
     </section>
 
@@ -199,7 +200,6 @@
     </footer>
   </div>
 
-  <!-- JavaScript -->
   <script>
     document.getElementById('show-image-btn').addEventListener('click', function () {
       const img = document.getElementById('about-photo');
@@ -229,6 +229,5 @@
       });
     });
   </script>
-
 </body>
 </html>
