@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
-    /* Add smooth scroll */
     html {
       scroll-behavior: smooth;
     }
+
     /* Navigation Bar */
     .navbar {
       position: fixed;
@@ -19,45 +19,60 @@
       width: 100%;
       background-color: #ece2d0;
       padding: 10px 0;
-      z-index: 10;
+      z-index: 100;
     }
 
-    .navbar ul {
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #2e294e;
+    }
+
+    .nav-links {
+      display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0;
     }
 
-    .navbar ul li {
-      margin: 0 20px;
+    .nav-links li {
+      margin: 0 15px;
     }
 
-    .navbar ul li a {
+    .nav-links li a {
       color: #2e294e;
       font-weight: bold;
       text-decoration: none;
       padding: 5px 10px;
     }
 
-    .navbar ul li a.active {
+    .nav-links li a.active {
       color: #077187;
       border-bottom: 2px solid #077187;
     }
 
     /* Card-like sections */
     section {
-      margin: 40px auto;
+      margin: 80px auto 40px;
       max-width: 900px;
       padding: 20px;
       background-color: white;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 10px;
-      margin-bottom: 30px;
     }
 
-    /* Avatar Section */
     .home {
       display: flex;
       align-items: center;
@@ -76,13 +91,12 @@
       margin-top: 20px;
     }
 
-    /* Tech Stack Section */
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
     }
-    
+
     .tech-stack ul {
       list-style: none;
       display: flex;
@@ -107,43 +121,68 @@
       background-color: #4a7b9d;
     }
 
-    /* Responsive Styles for Mobile */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .navbar ul {
-        flex-direction: column;
+      .hamburger {
+        display: block;
       }
 
-      .navbar ul li {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #ece2d0;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-top: 1px solid #ccc;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
         margin: 10px 0;
+        text-align: center;
       }
 
       .intro-container {
         margin-bottom: 30px;
       }
+
+      section {
+        margin: 100px 20px 40px;
+      }
     }
 
-    /* Lottie Animation */
     .home lottie-player {
       width: 180px;
       height: 180px;
     }
-
   </style>
 </head>
-  
+
 <body>
   <div class="navbar">
     <div class="nav-container">
       <button class="hamburger" id="hamburger">&#9776;</button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#tech">Tech Stack</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-     </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="container">
@@ -154,7 +193,6 @@
           src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/Waving.json"
           background="transparent"
           speed="1"
-          style="width: 200px; height: 200px;"
           loop
           autoplay
         ></lottie-player>
@@ -168,7 +206,7 @@
     <!-- About Me Section -->
     <section id="about" class="about">
       <h2>About Me</h2>
-      <button id="show-image-btn">Click to see a photo from my journey</button>
+      <button id="show-image-btn">Click to view a photo of me</button>
       <img src="me.jpg" alt="Feyze Malik" class="about-photo" id="about-photo" style="display: none; width: 250px; margin-top: 1em;"/>
 
       <p>
@@ -180,7 +218,7 @@
       </p>
     </section>
 
-   <!-- Projects -->
+    <!-- Projects -->
     <section id="projects" class="projects">
       <h2>Projects</h2>
       <ul>
@@ -255,39 +293,35 @@
       const img = document.getElementById('about-photo');
       img.style.display = img.style.display === 'none' ? 'block' : 'none';
     });
-  </script>
 
-  <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-  
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Active section highlighter
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll(".nav-link");
+
     window.addEventListener("scroll", () => {
-      let current = "";
-  
+      let currentId = "";
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute("id");
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentId = section.getAttribute("id");
         }
       });
-  
-      navLinks.forEach((link) => {
+
+      navItems.forEach((link) => {
         link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
+        if (link.getAttribute("href") === `#${currentId}`) {
           link.classList.add("active");
         }
       });
     });
   </script>
-
-  <script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-  </script>
-
 </body>
 </html>
