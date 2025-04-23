@@ -1,5 +1,5 @@
 // =======================
-// Sidebar Menu Functionality
+// Sidebar Menu Functionality (Mobile Only)
 // =======================
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
@@ -16,10 +16,11 @@ function closeMenu() {
   overlay.classList.remove("show");
 }
 
-hamburger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", closeMenu);
-navLinks.forEach(link => link.addEventListener("click", closeMenu));
-
+if (hamburger && overlay && sidebar) {
+  hamburger.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", closeMenu);
+  navLinks.forEach(link => link.addEventListener("click", closeMenu));
+}
 
 // =======================
 // Active Section Highlighter on Scroll
@@ -27,11 +28,11 @@ navLinks.forEach(link => link.addEventListener("click", closeMenu));
 const sections = document.querySelectorAll("section[id]");
 const allNavLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener("scroll", () => {
+function updateActiveLink() {
   let currentId = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120; // Adjust this value if necessary
+    const sectionTop = section.offsetTop - 120;
     const sectionHeight = section.offsetHeight;
 
     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
@@ -40,10 +41,13 @@ window.addEventListener("scroll", () => {
   });
 
   allNavLinks.forEach(link => {
-    link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
+    const href = link.getAttribute("href");
+    link.classList.toggle("active", href === `#${currentId}`);
   });
-});
+}
 
+window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("load", updateActiveLink); // Highlight on page load
 
 // =======================
 // Fun Facts Rotator
@@ -59,7 +63,7 @@ const facts = [
   "I’m passionate about solving real-world problems with code and machines 🤖",
   "I grew up with three sisters, so I know how to survive chaos 📄",
   "I once electrocuted myself trying to reinvent one of my toy cars ⚡",
-  "One of my favorite songs is Hots Full of Love by Josh Rouse 🎶",
+  "One of my favorite songs is Hearts Full of Love by Josh Rouse 🎶",
   "I'm all about living sustainably and embracing a minimalist lifestyle ♻️"
 ];
 
@@ -67,11 +71,13 @@ let currentFact = 0;
 const factText = document.getElementById("fact-text");
 
 function showNextFact() {
-  factText.textContent = facts[currentFact];
-  currentFact = (currentFact + 1) % facts.length;
+  if (factText) {
+    factText.textContent = facts[currentFact];
+    currentFact = (currentFact + 1) % facts.length;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  showNextFact(); // Display first fact immediately
+  showNextFact(); // Show first fact
   setInterval(showNextFact, 5000); // Rotate every 5 seconds
 });
