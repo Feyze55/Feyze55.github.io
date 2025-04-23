@@ -82,18 +82,15 @@ section {
   justify-content: center;
   align-items: flex-start;
   padding: 40px 20px;
-  flex-wrap: wrap;
-  gap: 40px;
 }
 
 .intro-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
   max-width: 1200px;
   width: 100%;
-  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -147,6 +144,7 @@ section {
 
 .baymax {
   flex: 0 0 180px;
+  align-self: center;
 }
 
 .baymax lottie-player {
@@ -164,23 +162,28 @@ section {
 
   .left-column {
     align-items: center;
+    order: 1;
   }
 
-  .intro-text,
-  .trivia,
-  .social-links {
+  .intro-text {
     text-align: center;
-    align-items: center;
-  }
-
-  .social-links {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
   }
 
   .baymax {
-    order: 1; /* Show after intro text */
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .trivia {
+    order: 3;
+    text-align: center;
+  }
+
+  .social-links {
+    order: 4;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
   }
 }
 
