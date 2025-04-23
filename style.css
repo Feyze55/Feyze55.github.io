@@ -152,42 +152,7 @@ section {
   height: 180px;
 }
 
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .intro-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .left-column {
-    align-items: center;
-    order: 1;
-  }
-
-  .intro-text {
-    text-align: center;
-  }
-
-  .baymax {
-    order: 2;
-    margin-top: 20px;
-  }
-
-  .trivia {
-    order: 3;
-    text-align: center;
-  }
-
-  .social-links {
-    order: 4;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
-
-/* Tech Stack */
+/* Tech Stack Section */
 .tech-stack {
   text-align: center;
 }
@@ -225,10 +190,8 @@ section {
   align-items: center;
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 20px auto 0;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .stack-icons li {
@@ -266,6 +229,7 @@ footer {
   color: #64748b;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -291,13 +255,77 @@ footer {
     text-align: center;
   }
 
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-column {
+    align-items: center;
+    order: 1;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
+  .baymax {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .trivia {
+    order: 3;
+    text-align: center;
+  }
+
+  .social-links {
+    order: 4;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
   section {
     margin: 100px 20px 40px;
   }
+}
+
+/* Sidebar and Overlay (for mobile nav) */
+#sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 101;
+}
+
+#sidebar.show {
+  display: block;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+#overlay.show {
+  display: block;
 }
 
 .about-photo {
   width: 250px;
   margin-top: 1em;
 }
-
