@@ -162,12 +162,16 @@ section {
 }
 
 /* TIMELINE */
+.timeline-section {
+  padding: 2em 1em;
+}
+
 .timeline {
   position: relative;
   margin: 2em auto;
   padding-left: 30px;
   border-left: 3px solid #ccc;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .timeline-item {
@@ -177,7 +181,7 @@ section {
 
 .timeline-dot {
   position: absolute;
-  left: -9px;
+  left: -11px;
   top: 0;
   width: 18px;
   height: 18px;
@@ -192,6 +196,11 @@ section {
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.2em;
 }
 
 /* TECH STACK */
