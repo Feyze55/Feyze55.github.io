@@ -353,10 +353,6 @@ section {
     margin: 100px 20px 40px;
   }
 
-  .contact {
-    padding: 0 15px; /* Match section padding on small screens */
-  }
-
   .contact-info {
     flex-direction: column;
     gap: 15px;
@@ -417,9 +413,9 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px 15px;
-  font-size: 14px;
-  color: #64748b;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 20px;
+  background-color: #e0f2fe;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-top: 60px;
 }
