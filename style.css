@@ -234,9 +234,7 @@ section {
 /* CONTACT SECTION */
 .contact {
   text-align: center;
-  margin: 60px auto;
-  padding: 0 20px; /* Ensures consistent side padding like other sections */
-  max-width: 900px;
+  padding: 20px; /* Ensures consistent side padding like other sections */
 }
 
 .contact h2 {
