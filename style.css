@@ -233,7 +233,6 @@ section {
 
 /* CONTACT SECTION */
 .contact {
-  text-align: center;
   padding: 20px; /* Ensures consistent side padding like other sections */
 }
 
@@ -331,6 +330,7 @@ section {
   }
 
   .intro-text {
+    order: 1;
     text-align: center;
   }
 
