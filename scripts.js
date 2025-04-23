@@ -1,26 +1,28 @@
 // =======================
 // Sidebar Menu Functionality (Mobile Only)
 // =======================
-const hamburger = document.getElementById("hamburger");
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-const navLinks = document.querySelectorAll(".sidebar .nav-link");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const navLinks = document.querySelectorAll(".sidebar .nav-link");
 
-function toggleMenu() {
-  sidebar.classList.toggle("show");
-  overlay.classList.toggle("show");
-}
+  function toggleMenu() {
+    sidebar.classList.toggle("show");
+    overlay.classList.toggle("show");
+  }
 
-function closeMenu() {
-  sidebar.classList.remove("show");
-  overlay.classList.remove("show");
-}
+  function closeMenu() {
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
+  }
 
-if (hamburger && overlay && sidebar) {
-  hamburger.addEventListener("click", toggleMenu);
-  overlay.addEventListener("click", closeMenu);
-  navLinks.forEach(link => link.addEventListener("click", closeMenu));
-}
+  if (hamburger && overlay && sidebar) {
+    hamburger.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", closeMenu);
+    navLinks.forEach(link => link.addEventListener("click", closeMenu));
+  }
+});
 
 // =======================
 // Active Section Highlighter on Scroll
