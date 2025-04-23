@@ -230,7 +230,9 @@ section {
 .contact {
   text-align: center;
   margin: 60px auto;
+  padding: 0 20px; /* Ensures consistent side padding like other sections */
   max-width: 900px;
+  box-sizing: border-box;
 }
 
 .contact h2 {
@@ -252,6 +254,8 @@ section {
   align-items: center;
   gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .contact-item img {
@@ -349,6 +353,10 @@ section {
     margin: 100px 20px 40px;
   }
 
+  .contact {
+    padding: 0 15px; /* Match section padding on small screens */
+  }
+
   .contact-info {
     flex-direction: column;
     gap: 15px;
@@ -404,4 +412,14 @@ section {
   object-fit: contain;
   display: block;
   margin-top: 1em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 14px;
+  color: #64748b;
+  width: 100%;
+  box-sizing: border-box;
 }
