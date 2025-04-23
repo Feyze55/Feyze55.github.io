@@ -222,6 +222,65 @@ section {
   transform: translateY(-6px);
 }
 
+/* Contact Section */
+.contact {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #1e3a8a;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.contact-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.contact-item a {
+  color: #1e3a8a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #2563eb;
+}
+
+/* Responsive Adjustments for Contact Section */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 footer {
   text-align: center;
   padding: 20px 0;
