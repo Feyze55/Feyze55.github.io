@@ -1,3 +1,4 @@
+/* General Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +13,8 @@ body {
 h1, h2, h3 {
   font-family: 'DM Serif Display', serif;
   color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 15px;  /* Uniform margin for consistency */
 }
 
 /* NAVBAR */
@@ -42,6 +45,7 @@ h1, h2, h3 {
   border: none;
   cursor: pointer;
   color: #1e3a8a;
+  transition: transform 0.3s ease; /* Added transition for smoother animation */
 }
 
 .nav-links {
@@ -60,7 +64,7 @@ h1, h2, h3 {
   font-weight: 600;
   text-decoration: none;
   padding: 5px 10px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 .nav-links li a:hover,
@@ -77,6 +81,7 @@ section {
   background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 /* HOME */
@@ -232,7 +237,6 @@ section {
   margin: 60px auto;
   padding: 0 20px; /* Ensures consistent side padding like other sections */
   max-width: 900px;
-  box-sizing: border-box;
 }
 
 .contact h2 {
@@ -401,6 +405,7 @@ section {
   display: block;
 }
 
+/* About Photo */
 .about-photo {
   width: 250px;
   max-width: 100%;
