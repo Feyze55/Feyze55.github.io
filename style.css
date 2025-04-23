@@ -162,45 +162,54 @@ section {
 }
 
 /* TIMELINE */
-.timeline-section {
-  padding: 2em 1em;
-}
-
-.timeline {
+.timeline-container {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  margin: 2em auto;
-  padding-left: 30px;
-  border-left: 3px solid #ccc;
-  max-width: 700px;
+  padding-left: 20px;
+  border-left: 2px solid #ccc;
+  margin-top: 1em;
 }
 
 .timeline-item {
   position: relative;
-  margin: 2em 0;
+  padding: 1em 0;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -11px;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  background: #4CAF50;
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px #4CAF50;
+.timeline-date {
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 0.2em;
 }
 
 .timeline-content {
-  background: #f9f9f9;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding-left: 1em;
+  border-left: 2px solid #007acc;
+  margin-left: 0.5em;
 }
 
-.timeline-content h3 {
-  margin: 0 0 0.5em;
-  font-size: 1.2em;
+@media (min-width: 768px) {
+  .timeline-container {
+    margin-left: 2em;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .timeline-date {
+    width: 100px;
+    text-align: right;
+    padding-right: 1em;
+    flex-shrink: 0;
+  }
+
+  .timeline-content {
+    padding-left: 1.5em;
+    border-left: 2px solid #007acc;
+    margin-left: 0;
+  }
 }
 
 /* TECH STACK */
