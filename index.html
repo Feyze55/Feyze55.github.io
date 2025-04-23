@@ -11,9 +11,9 @@
 
 <body>
 
-  <div class="navbar">
+  <header class="navbar">
     <div class="nav-container">
-      <button class="hamburger" id="hamburger">&#9776;</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About Me</a></li>
@@ -23,13 +23,12 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
-  </div>
+  </header>
 
-  <div class="container">
+  <main class="container">
     <!-- Homepage Section -->
     <section id="home" class="home">
       <div class="intro-container">
-        <!-- Baymax moved for mobile-first layout control -->
         <div class="baymax">
           <lottie-player
             src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/Waving.json"
@@ -39,25 +38,25 @@
             autoplay
           ></lottie-player>
         </div>
-    
+
         <div class="left-column">
           <div class="intro-text">
-            <h2>Hi there!</h2>
+            <h1>Hi there!</h1>
             <p>I'm Feyze Malik, a Mechatronic Engineering student who loves building things — from circuits to code. Welcome to my portfolio!</p>
           </div>
           <div class="trivia">
-            <h3>Behind the Code 💡</h3>
+            <h2>Behind the Code 💡</h2>
             <p id="fact-text">Loading fact...</p>
           </div>
           <div class="social-links">
             <a href="https://github.com/Feyze55" target="_blank" title="GitHub">
-              <img src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/github.png" alt="GitHub">
+              <img src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/github.png" alt="GitHub logo" />
             </a>
             <a href="https://linkedin.com/in/feyze55" target="_blank" title="LinkedIn">
-              <img src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/linkedin.png" alt="LinkedIn">
+              <img src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/linkedin.png" alt="LinkedIn logo" />
             </a>
             <a href="mailto:malikfeyze@gmail.com" title="Email">
-              <img src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/email.png" alt="Email">
+              <img src="https://raw.githubusercontent.com/Feyze55/Feyze55.github.io/main/email.png" alt="Email icon" />
             </a>
           </div>
         </div>
@@ -68,13 +67,13 @@
     <section id="about" class="about">
       <h2>About Me</h2>
       <p>
-        My journey started as a kid who always broke his remote control cars, using the motor to make fans and the LEDs to build small torches — just trying to understand each individual element that made up this product.
+        My journey started as a kid who always broke his remote control cars, using the motors to make fans and the LEDs to build small torches — just trying to understand each individual element that made up the product.
         <br><br>
-        By the time I reached high school, I learned about the two aspects of technology: the hardware and the software. I chose IT in Grade 10 even without a laptop. Once I got one, I dove deep into coding — and fell in love.
+        By the time I reached high school, I learned about the two aspects of technology: hardware and software. I chose IT in Grade 10 even without a laptop. Once I got one, I dove deep into coding — and fell in love.
         <br><br>
         Now, as a Mechatronic Engineering student at NWU, I’m eager to explore how microcontrollers, circuits, and code can work in harmony.
       </p>
-      <img src="me.jpg" alt="Feyze Malik" class="about-photo" id="about-photo"/>
+      <img src="me.jpg" alt="Photo of Feyze Malik" class="about-photo" id="about-photo" />
     </section>
 
     <!-- Projects -->
@@ -83,7 +82,7 @@
       <ul>
         <li>
           <strong>Labyrinth of the Mathematician (2022)</strong>  
-          <p>An educational math game created in Grade 10 to help students engage with mathematical concepts through gameplay logic and interactive problem-solving.  
+          <p>An educational math game created in Grade 10 to help students engage with mathematical concepts through gameplay and interactive problem-solving.  
           <br><em>🛠️ Web version coming soon...</em></p>
         </li>
         <li>
@@ -140,13 +139,13 @@
       <h2>Download My CV</h2>
       <a href="Feyze_CV.pdf" download class="btn">Download CV (PDF)</a>
     </section>
+  </main>
 
-    <footer>
+  <footer>
     <p>© 2025 Feyze Malik. All rights reserved.</p>
-    </footer>
-  </div>
+  </footer>
 
   <!-- JavaScript -->
-<script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
