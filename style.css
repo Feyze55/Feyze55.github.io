@@ -161,6 +161,39 @@ section {
   height: 180px;
 }
 
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 2em auto;
+  padding-left: 30px;
+  border-left: 3px solid #ccc;
+  max-width: 600px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 2em 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: #4CAF50;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #4CAF50;
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
 /* TECH STACK */
 .tech-stack {
   text-align: center;
@@ -410,7 +443,7 @@ section {
   height: auto;
   object-fit: contain;
   display: block;
-  margin-top: 1em;
+  margin: 1em auto 0 auto; /* top, horizontal (auto centers), bottom */
 }
 
 /* Footer */
