@@ -141,53 +141,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
-
-  // Slide-out sidebar menu
-  const hamburger = document.getElementById("hamburger");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-  const navLinks = document.querySelectorAll(".sidebar .nav-link");
-
-  hamburger.addEventListener("click", () => {
-    sidebar.classList.toggle("show");
-    overlay.classList.toggle("show");
-  });
-
-  // Close menu when clicking outside or on a link
-  overlay.addEventListener("click", () => {
-    sidebar.classList.remove("show");
-    overlay.classList.remove("show");
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      sidebar.classList.remove("show");
-      overlay.classList.remove("show");
-    });
-  });
-
-  // Active section highlighter
-  const sections = document.querySelectorAll("section[id]");
-  const allNavLinks = document.querySelectorAll(".nav-link");
-
-  window.addEventListener("scroll", () => {
-    let currentId = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.offsetHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        currentId = section.getAttribute("id");
-      }
-    });
-
-    allNavLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === #${currentId}) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
