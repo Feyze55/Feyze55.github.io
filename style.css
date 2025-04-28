@@ -162,16 +162,12 @@ section {
 }
 
 /* TIMELINE */
-.timeline-section {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 2rem;
-  border-left: 3px solid #007acc;
-}
 
 .timeline-container {
   margin-bottom: 2rem;
   position: relative;
+  border-left: 3px solid #007acc;
+  padding-left: 2rem;
 }
 
 .timeline-dot {
@@ -215,7 +211,7 @@ section {
     margin-left: 2em;
   }
 
-  .timeline-item {
+  .timeline-card {
     display: flex;
     align-items: flex-start;
   }
