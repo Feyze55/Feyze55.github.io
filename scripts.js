@@ -55,18 +55,17 @@ window.addEventListener("load", updateActiveLink); // Highlight on page load
 // Fun Facts Rotator
 // =======================
 const facts = [
-  "I'm a Mechatronic Engineering student at NWU 🎓",
+  "I'm a Mechatronic Engineering student at North West University 🎓",
   "I once built a photo gallery web app using Express and Cloudinary 📸",
   "I'm learning HTML, JavaScript, and C#—all at once 🤓",
   "I love watching shows—favorites include The Office, The Big Bang Theory, and Trailer Park Boys ✨",
-  "I live on campus and survive with just a kettle and an air fryer 🍳",
+  "I live on campus and I enjoy a minimalistic lifestyle 🍳",
   "I'm into fitness and constantly working on becoming a better version of myself 💪",
-  "I believe compassion shouldn’t shrink just because a life form is small 🌱",
   "I’m passionate about solving real-world problems with code and machines 🤖",
   "I grew up with three sisters, so I know how to survive chaos 📄",
-  "I once electrocuted myself trying to reinvent one of my toy cars ⚡",
-  "One of my favorite songs is Hearts Full of Love by Josh Rouse 🎶",
-  "I'm all about living sustainably and embracing a minimalist lifestyle ♻️"
+  "One of my favorite songs is Hots Full of Love by Josh Rouse 🎶",
+  "I'm all about living a sustainable and environmentally friendly llfe♻️"
+  "Through my love for animals I considered being a vet when I was young "
 ];
 
 let currentFact = 0;
