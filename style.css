@@ -163,22 +163,39 @@ section {
 
 /* TIMELINE */
 .timeline-section {
-  padding: 2em 0;
-  background-color: #f9f9f9;
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 3px solid #007acc;
 }
 
 .timeline-container {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 2rem;
   position: relative;
-  padding-left: 20px;
-  border-left: 2px solid #ccc;
-  margin-top: 1em;
 }
 
-.timeline-item {
-  position: relative;
-  padding: 1em 0;
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: #007acc;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.timeline-card {
+  background: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-left: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
 }
 
 .timeline-date {
