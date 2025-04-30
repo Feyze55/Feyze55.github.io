@@ -197,6 +197,8 @@ section {
 
 .social-links {
   display: flex;
+  margn-left: auto;
+  margn-right: auto;
   gap: 20px;
   justify-content: flex-start;
 }
