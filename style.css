@@ -133,6 +133,13 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+  .about-photo {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
+
 /* Home */
 .home {
   display: flex;
