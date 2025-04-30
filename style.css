@@ -457,25 +457,30 @@ section {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 101;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 #sidebar.show {
-  display: block;
+  transform: translateX(0);
 }
 
 #overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
   z-index: 100;
 }
 
 #overlay.show {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* About Photo */
