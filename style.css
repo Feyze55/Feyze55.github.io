@@ -125,6 +125,13 @@ section {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  section {
+    padding: 20px 15px;
+    margin: 60px 10px 30px;
+  }
+}
+
 .about-photo {
   max-width: 250px;
   width: 100%;
