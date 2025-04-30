@@ -1,20 +1,23 @@
-// =======================
-// Sidebar Menu Functionality (Mobile Only)
-// =======================
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
   const navLinks = document.querySelectorAll(".sidebar .nav-link");
 
+  // Toggle the sidebar and overlay visibility
   function toggleMenu() {
-    sidebar.classList.toggle("show");
-    overlay.classList.toggle("show");
+    if (sidebar && overlay) {  // Ensure they exist before toggling
+      sidebar.classList.toggle("show");
+      overlay.classList.toggle("show");
+    }
   }
 
+  // Close the sidebar and overlay
   function closeMenu() {
-    sidebar.classList.remove("show");
-    overlay.classList.remove("show");
+    if (sidebar && overlay) { // Ensure they exist before closing
+      sidebar.classList.remove("show");
+      overlay.classList.remove("show");
+    }
   }
 
   if (hamburger && overlay && sidebar) {
@@ -65,7 +68,7 @@ const facts = [
   "I grew up with three sisters, so I know how to survive chaos 📄",
   "One of my favorite songs is Hots Full of Love by Josh Rouse 🎶",
   "I'm all about living a sustainable and environmentally friendly life ♻️",
-  "Through my love for animals I considered being a vet when I was young 🐾"
+  "Through my love for animals, I considered being a vet when I was young 🐾"
 ];
 
 let currentFact = 0;
