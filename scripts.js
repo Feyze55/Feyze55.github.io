@@ -64,8 +64,8 @@ const facts = [
   "I’m passionate about solving real-world problems with code and machines 🤖",
   "I grew up with three sisters, so I know how to survive chaos 📄",
   "One of my favorite songs is Hots Full of Love by Josh Rouse 🎶",
-  "I'm all about living a sustainable and environmentally friendly llfe♻️"
-  "Through my love for animals I considered being a vet when I was young "
+  "I'm all about living a sustainable and environmentally friendly llfe ♻️",
+  "Through my love for animals I considered being a vet when I was young 🐾"
 ];
 
 let currentFact = 0;
