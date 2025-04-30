@@ -133,10 +133,11 @@ section {
 }
 
 .about-photo {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  max-width: 250px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -199,10 +200,8 @@ section {
 
 .social-links {
   display: flex;
-  margn-left: auto;
-  margn-right: auto;
+  justify-content: center; /* Center horizontally */
   gap: 20px;
-  justify-content: flex-start;
 }
 
 .social-links a img {
