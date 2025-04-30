@@ -53,6 +53,16 @@ h1, h2, h3 {
   transform: translateX(0);
 }
 
+#sidebar {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#sidebar.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
