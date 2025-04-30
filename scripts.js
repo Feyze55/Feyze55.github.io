@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section[id]");
   const allNavLinks = document.querySelectorAll(".nav-link");
 
+  document.getElementById("hamburger").addEventListener("click", function() {
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("active");
+  });
+  
   // Toggle the sidebar and overlay visibility
   function toggleMenu() {
     if (sidebar && overlay) {
