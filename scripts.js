@@ -1,37 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-  const navLinks = document.querySelectorAll(".sidebar .nav-link");
   const sections = document.querySelectorAll("section[id]");
   const allNavLinks = document.querySelectorAll(".nav-link");
-
-  document.getElementById("hamburger").addEventListener("click", function() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("active");
-  });
-  
-  // Toggle the sidebar and overlay visibility
-  function toggleMenu() {
-    if (sidebar && overlay) {
-      sidebar.classList.toggle("show");
-      overlay.classList.toggle("show");
-    }
-  }
-
-  // Close the sidebar and overlay
-  function closeMenu() {
-    if (sidebar && overlay) {
-      sidebar.classList.remove("show");
-      overlay.classList.remove("show");
-    }
-  }
-
-  if (hamburger && overlay && sidebar) {
-    hamburger.addEventListener("click", toggleMenu);
-    overlay.addEventListener("click", closeMenu);
-    navLinks.forEach(link => link.addEventListener("click", closeMenu));
-  }
 
   // =======================
   // Active Section Highlighter on Scroll
