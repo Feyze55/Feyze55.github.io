@@ -199,7 +199,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .intro-container {
@@ -243,8 +243,8 @@ section {
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   gap: 20px;
 }
 
@@ -272,9 +272,10 @@ section {
 }
 
 .btn {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   padding: 10px 20px;
-  background-color: #2563eb;         
+  background-color: #f0f4ff;         
   color:#1e40af;                 
   font-weight: 600;
   border: none;
@@ -287,7 +288,7 @@ section {
 
 .btn:hover {
   background-color: #1e40af; 
-  color: #2563eb; 
+  color: #f0f4ff; 
   transform: translateY(-2px);
 }
 
@@ -303,26 +304,26 @@ section {
   position: relative;
   padding-left: 2rem;
   border-left: 3px solid #007acc;
-  margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .timeline-dot {
   position: absolute;
-  top: 0.75rem;
-  left: -11px;
-  width: 20px;
-  height: 20px;
+  top: 0.8rem;       
+  left: -13px;         
+  width: 16px;
+  height: 16px;
   background: #007acc;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid white
 }
 
 .timeline-card {
+  margin-left: 1.5rem; 
   background: white;
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-left: 1.5rem;
   transition: transform 0.3s ease;
 }
 
