@@ -162,7 +162,7 @@ h1, h2, h3, #logo {
 
 /* Section Styling */
 section {
-  margin: 100px 40px;
+  margin: 100px auto;
   max-width: 900px;
   padding: 20px;
   background-color: white;
