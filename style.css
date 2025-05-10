@@ -317,7 +317,7 @@ section {
 .timeline-container::before {
   content: "";
   position: absolute;
-  top: 7%;     
+  top: 6.5%;     
   bottom: 6%;  
   left: -3px;
   width: 4px;
