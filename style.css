@@ -314,7 +314,7 @@ section {
   position: absolute;
   top: 62px;     /* Adjust this value to lift the top of the line */
   bottom: 58px;  /* Adjust this value to lift the bottom of the line */
-  left: 0;
+  left: -4px;
   width: 4px;
   background-color: #007acc;
 }
