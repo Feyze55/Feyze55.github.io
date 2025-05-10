@@ -33,7 +33,7 @@ h1, h2, h3, #logo {
   font-weight: 600;
   text-decoration: none;
   padding: 8px 12px;
-  font-size: 16px;
+  font-size: 18px;
   display: block;
   transition: color 0.2s ease, border 0.2s ease, background-color 0.2s ease;
 }
@@ -162,7 +162,7 @@ h1, h2, h3, #logo {
 
 /* Section Styling */
 section {
-  margin: 80px auto 40px;
+  margin: 100px 40px;
   max-width: 900px;
   padding: 20px;
   background-color: white;
