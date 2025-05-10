@@ -268,13 +268,13 @@ section {
 .btn {
   display: block;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 0;
   background-color: #f0f4ff;         
   color:#1e40af;                 
   font-weight: 600;
   border: none;
   border-radius: 8px;
-  justify-content: center;
+  text-align: center;
   text-decoration: none;
   width: 100%;
   max-width: 250px;
@@ -307,24 +307,15 @@ section {
   position: relative;
   margin-left: 30px; 
   padding-left: 20px; 
-  width: 100%;
   border-left: 3px solid #007acc;
 }
 
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 10px; /* Position the vertical line relative to the container */
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: #007acc;
-}
 
 .timeline-dot {
   position: absolute;
-  top: 0.8rem;       
-  left: 4px;         
+  top: 0.8rem;  
+  padding-left: 0;
+  left: -20px;         
   width: 16px;
   height: 16px;
   background: #007acc;
@@ -335,6 +326,7 @@ section {
 .timeline-card {
   margin-left: 1.5rem; 
   background: white;
+  width: 100%;
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
