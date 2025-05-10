@@ -106,6 +106,10 @@ h1, h2, h3, #logo {
   align-items: flex-start;
 }
 
+#sidebarlist {  
+  margin-bottom: 10px;
+}
+
 .sidebar.show {
   right: 0;
 }
