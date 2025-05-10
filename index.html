@@ -188,7 +188,10 @@
     <!-- Contact -->
     <section id="contact" class="contact">
       <h2>Contact Me</h2>
-      <form class="contact-form" action="mailto:malikfeyze@gmail.com" method="POST" enctype="text/plain">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="text/plain">
+        <input type="hidden" name="access_key" value="5d052c4e-133d-4ae0-836b-504504087985">
+        <input type="hidden" name="subject" value="New Submission: {subject}">
+        <input type="hidden" name="message" value="Message: {message} <br><br> Name: {full_name} <br> Phone Number: {phone} <br> Email: {email}">
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="email" name="email" placeholder="Email" required />
         <input type="tel" name="phone" placeholder="Phone Number" />
@@ -224,5 +227,6 @@
   </footer>
 
   <script src="scripts.js"></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
