@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section[id]");
   const allNavLinks = document.querySelectorAll(".nav-link");
+  const hamburger = document.querySelector(".hamburger");
+  const sidebar = document.querySelector(".sidebar");
+  const overlay = document.querySelector(".overlay");
 
   // =======================
   // Active Section Highlighter on Scroll
@@ -22,7 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.toggle("active", href === `#${currentId}`);
     });
   }
+  
+  // Toggle the sidebar visibility
+  function toggleSidebar() {
+    sidebar.classList.toggle("show");
+    overlay.classList.toggle("show");
+  }
 
+  // Close the sidebar when the overlay is clicked
+  function closeSidebar() {
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
+  }
+
+  // Event listener for hamburger button
+  hamburger.addEventListener("click", toggleSidebar);
+
+  // Event listener for overlay click to close sidebar
+  overlay.addEventListener("click", closeSidebar);
+  
   // Debounce scroll event to optimize performance
   let timeout;
   function debounce(func, delay) {
