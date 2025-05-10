@@ -10,7 +10,7 @@ body {
   color: #1e293b;
 }
 
-h1, h2, h3 {
+h1, h2, h3, logo {
   font-family: 'DM Serif Display', serif;
   color: #1e3a8a;
   font-weight: 600;
@@ -86,7 +86,7 @@ h1, h2, h3 {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -270px; /* Start hidden off-screen */
+  right: -290px; /* Start hidden off-screen */
   width: 250px;
   height: 100%;
   background-color: #e0f2fe;
@@ -118,11 +118,12 @@ h1, h2, h3 {
   font-size: 18px;
   padding: 5px 10px;
   display: block;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 .sidebar .nav-links li a:hover {
   color: #2563eb;
+  border-bottom: 2px solid #2563eb;
 }
 
 /* Responsive Design: Show Hamburger & Sidebar on Small Screens */
@@ -143,7 +144,7 @@ h1, h2, h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(30, 58, 138, 0.5);
   z-index: 999;
   display: none; /* Hidden by default */
   transition: opacity 0.3s ease;
