@@ -307,8 +307,8 @@ section {
   position: relative;
   margin-left: 23px; 
   padding-left: 20px; 
-  border-left: 3px solid #007acc;
-  border-margin: 10px;
+  border-left: 4px solid #007acc;
+  border-margin: 100px;
 }
 
 .timeline-dot {
