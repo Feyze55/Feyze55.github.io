@@ -312,9 +312,9 @@ section {
 .timeline-container::before {
   content: "";
   position: absolute;
-  top: 62px;     /* Adjust this value to lift the top of the line */
-  bottom: 58px;  /* Adjust this value to lift the bottom of the line */
-  left: -4px;
+  top: 62px;     
+  bottom: 58px;  
+  left: -3px;
   width: 4px;
   background-color: #007acc;
 }
