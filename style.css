@@ -312,8 +312,8 @@ section {
 .timeline-container::before {
   content: "";
   position: absolute;
-  top: 62px;     
-  bottom: 62px;  
+  top: 15%;     
+  bottom: 10%;  
   left: -3px;
   width: 4px;
   background-color: #007acc;
