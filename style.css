@@ -63,6 +63,96 @@ h1, h2, h3 {
   border-bottom: 2px solid #2563eb;
 }
 
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: #1e3a8a;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Start hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #e0f2fe;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.show {
+  right: 0; /* Show the sidebar when it has the 'show' class */
+}
+
+.sidebar .nav-links {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .nav-links li {
+  margin: 20px 0;
+}
+
+.sidebar .nav-links li a {
+  color: #1e3a8a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.sidebar .nav-links li a:hover {
+  color: #2563eb;
+}
+
+/* Responsive Design: Show Hamburger & Sidebar on Small Screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the original nav links on smaller screens */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on small screens */
+  }
+}
+
+/* Close the sidebar when the overlay is clicked */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  display: block;
+}
+
 /* Section Styling */
 section {
   margin: 80px auto 40px;
