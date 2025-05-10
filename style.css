@@ -314,16 +314,16 @@ section {
   position: absolute;
   top: 0.8rem;  
   padding-left: 0;
-  left: -28px;         
+  left: -36px;         
   width: 16px;
   height: 16px;
   background: #007acc;
-  border-radius: 50%;
+  border-radius: 0%;
   border: 3px solid white
 }
 
 .timeline-card {
-  margin-left: 1.5rem; 
+  margin-left: 1.0rem; 
   background: white;
   width: 100%;
   padding: 1em;
