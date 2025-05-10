@@ -312,9 +312,9 @@ section {
 
 .timeline-dot {
   position: absolute;
-  top: 0.8rem;  
+  top: 50%;  
   padding-left: 0;
-  left: -34px;
+  left: -30px;
   width: 16px;
   height: 16px;
   background: #007acc;
@@ -323,7 +323,7 @@ section {
 }
 
 .timeline-card {
-  margin-left: 1.0rem; 
+  margin-left: 0.8rem; 
   background: white;
   width: 100%;
   padding: 1em;
