@@ -4,7 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const sidebar = document.querySelector(".sidebar");
   const overlay = document.querySelector(".overlay");
+  const form = document.querySelector(".contact-form");
 
+  form.addEventListener("submit", function (e) {
+    // Optional: delay reset to ensure form is submitted first
+    setTimeout(() => {
+      form.reset();
+    }, 100); // delay helps avoid interfering with the submission
+  });
+  
   // =======================
   // Active Section Highlighter on Scroll
   // =======================
