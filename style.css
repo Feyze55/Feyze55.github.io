@@ -74,7 +74,7 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.hamburger div {
+.hamburger span {
   width: 100%;
   height: 4px;
   background-color: #1e3a8a;
@@ -86,7 +86,7 @@ h1, h2, h3 {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -250px; /* Start hidden off-screen */
+  right: -270px; /* Start hidden off-screen */
   width: 250px;
   height: 100%;
   background-color: #e0f2fe;
