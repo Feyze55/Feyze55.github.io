@@ -307,8 +307,16 @@ section {
   position: relative;
   margin-left: 23px; 
   padding-left: 20px; 
-  border-left: 2px solid #007acc;
-  border-margin: 100px 0;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 50px;     /* Adjust this value to lift the top of the line */
+  bottom: 50px;  /* Adjust this value to lift the bottom of the line */
+  left: 0;
+  width: 4px;
+  background-color: #007acc;
 }
 
 .timeline-dot {
