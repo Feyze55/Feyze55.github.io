@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.querySelector(".overlay");
   const form = document.querySelector(".contact-form");
   const sidebar = document.getElementById("sidebar");
-  const sidebarLinks = document.querySelectorAll("#sidebarlist a");
+  const sidebarLinks = document.querySelectorAll("#sidebarlist");
 
   sidebarLinks.forEach(link => {
     link.addEventListener("click", () => {
