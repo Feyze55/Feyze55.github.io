@@ -5,17 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector(".sidebar");
   const overlay = document.querySelector(".overlay");
   const form = document.querySelector(".contact-form");
-  const sidebar = document.getElementById("sidebar");
-  const sidebarLinks = document.querySelectorAll("#sidebarlist");
+  const sidebarLinks = document.querySelectorAll("#sidebarlist a");
 
   sidebarLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      sidebar.classList.remove("active"); // or 'open', depending on what your CSS uses
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
     });
   });
   
   form.addEventListener("submit", function (e) {
-    // Optional: delay reset to ensure form is submitted first
     setTimeout(() => {
       form.reset();
     }, 100); // delay helps avoid interfering with the submission
