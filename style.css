@@ -391,24 +391,39 @@ section {
   }
 }
 
-/* Tech Stack */
-.tech-stack {
+/* Tech Section Layout */
+.tech {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Shared column styling */
+.tech > div {
+  max-width: 320px;
+}
+
+/* Headings */
+.tech h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* Skills list */
+.Skills {
   text-align: center;
 }
 
-.stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.stack-list li {
+.Skills li {
+  list-style: none;
   background-color: #1e3a8a;
   color: white;
   padding: 10px 18px;
+  margin-bottom: 12px;
   border-radius: 9999px;
   font-weight: 600;
   font-size: 0.95em;
@@ -416,49 +431,48 @@ section {
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.stack-list li:hover {
+.Skills li:hover {
   transform: translateY(-4px);
   background-color: #2563eb;
 }
 
+/* Stack icons (vertical layout) */
 .stack-icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   list-style: none;
   padding: 0;
-  margin: 20px auto 0;
-  max-width: 800px;
+  margin: 0;
+  align-items: center;
 }
 
 .stack-icons li {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
+  gap: 14px;
+  padding: 10px 16px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
+.stack-icons li:hover {
+  transform: translateY(-4px);
+}
+
+/* Icons */
 .stack-icons img {
-  width: 60px;
-  height: 60px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
-  margin-bottom: 8px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
+/* Tech label */
 .stack-icons span {
   font-weight: bold;
   color: #1e3a8a;
-  font-size: 0.95em;
-}
-
-.stack-icons li:hover {
-  transform: translateY(-6px);
+  font-size: 1em;
 }
 
 /* Contact Section */

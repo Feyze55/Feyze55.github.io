@@ -75,15 +75,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const facts = [
     "I'm a Mechatronic Engineering student at North West University 🎓",
     "I once built a photo gallery web app using Express and Cloudinary 📸",
-    "I'm learning HTML, JavaScript, and C#—all at once 🤓",
-    "I love watching shows—favorites include The Office, The Big Bang Theory, and Trailer Park Boys ✨",
+    "I'm currently learning JavaScript, and C programming languages🤓",
+    "I love watching shows: my favorites include The Office, The Big Bang Theory, and Trailer Park Boys ✨",
     "I live on campus and I enjoy a minimalistic lifestyle 🍳",
-    "I'm into fitness and constantly working on becoming a better version of myself 💪",
+    "I'm into fitness and consistently working on becoming a better version of myself 💪",
     "I’m passionate about solving real-world problems with code and machines 🤖",
     "I grew up with three sisters, so I know how to survive chaos 📄",
     "One of my favorite songs is Hots Full of Love by Josh Rouse 🎶",
     "I'm all about living a sustainable and environmentally friendly life ♻️",
-    "Through my love for animals, I considered being a vet when I was young 🐾"
+    "Through my love for animals, I wanted to be a vet when I was young 🐾",
+    "I'm starting to realize why all the great thinkers were ahead of their time ",
+    "Sustainability over capitalist greed"
   ];
 
   let currentFact = 0;
