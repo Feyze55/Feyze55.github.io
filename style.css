@@ -17,6 +17,10 @@ h1, h2, h3, #logo {
   margin-bottom: 15px;
 }
 
+.hidden {
+  display: none;
+}
+
 #logo {
   color: #1e3a8a;
   font-size: 16px;
@@ -265,14 +269,32 @@ section {
   height: 180px;
 }
 
-.about-photo {
-  display: block;
-  margin: 0 auto;
+.carousel-wrapper {
   width: 100%;
-  max-width: 250px;
-  height: auto;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.carousel-img.center {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .btn {
